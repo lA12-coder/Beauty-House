@@ -5,13 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elegance Beauty House - Professional Makeup, Skincare & Hair Styling</title>
     <meta name="description" content="Transform your beauty with our professional makeup, skincare treatments, and hair styling services. Book your appointment today for bridal, party, and special event beauty services." />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico" />
-    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Prevent any favicon requests -->
+    <link rel="icon" href="data:," type="image/x-icon">
+    <link rel="shortcut icon" href="data:," type="image/x-icon">
+    
+    <!-- Prevent PWA manifest -->
+    <link rel="manifest" href="data:,">
+    
+    <!-- Prevent any browser-specific icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="data:,">
+    
+    <!-- Prevent Windows 8/10 tiles -->
     <meta name="msapplication-config" content="none">
     <meta name="msapplication-TileImage" content="">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    
+    <!-- Prevent theme color and other browser UI elements -->
+    <meta name="theme-color" content="#ffffff">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- Prevent any browser extensions from injecting content -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline';">
   </head>
   <body>
     <div id="root"></div>
